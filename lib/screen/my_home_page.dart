@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -30,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-                     Text("นับไปแล้ว $_counter"),
+                     Text(style: TextStyle(fontSize: 20),"นับไปแล้ว $_counter"),
           Center(
               child: Row(
                mainAxisAlignment: MainAxisAlignment.center,
