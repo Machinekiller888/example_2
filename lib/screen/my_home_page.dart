@@ -27,14 +27,19 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: const Text("My increment counter"),
       ),
-      body: Center(
-          child: Center(          
-            child: Row(children: [
-                    Text("นับไปแล้ว $_counter"),
-                    ElevatedButton(onPressed: () => _incrementCounter(), child: Text("+")),
-                    ElevatedButton(onPressed: ()=> _decrementCounter(), child: Text("-"))
-                  ]),
-          )),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+                     Text("นับไปแล้ว $_counter"),
+          Center(
+              child: Row(
+               mainAxisAlignment: MainAxisAlignment.center,
+               children: [
+                     ElevatedButton(onPressed: () => _incrementCounter(), child: Text(style: TextStyle(fontSize: 20),"+")),
+                     ElevatedButton(onPressed: ()=> _decrementCounter(), child: Text(style: TextStyle(fontSize: 20),"-"))
+                   ])),
+        ],
+      ),
 
       // floatingActionButton: FloatingActionButton(
       //   onPressed: _incrementCounter,
